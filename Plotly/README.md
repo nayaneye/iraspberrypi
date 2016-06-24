@@ -1,10 +1,10 @@
 Signup with plot.ly website:
 ---------------------------
 
-> [Plotly Website](https://plot.ly)
-> After login with your credential
-> Go to Settings, view your api-key and token.
-> If token not generated, Add new token.
+- [Plotly Website](https://plot.ly)
+- After creating account, login with your credentials.
+- Go to Settings, Note your api-key and token.
+- If token not generated, Click Add new token.
 
 Install the required modules and dependencies:
 ---------------------------------------------
