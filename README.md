@@ -3,4 +3,8 @@ iraspberrypi
 
 iraspberrypi.co.in
 
-notebook https://www.evernote.com/pub/nayaneye/iraspberrypi-meetup
+NoteBook https://www.evernote.com/pub/nayaneye/iraspberrypi-meetup
+
+![alt tag](https://raw.githubusercontent.com/nayaneye/iraspberrypi/master/iRaspberryPi.png)
+
+
