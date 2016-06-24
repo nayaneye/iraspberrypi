@@ -9,16 +9,15 @@ Signup with plot.ly website:
 Install the required modules and dependencies:
 ---------------------------------------------
 ```
-  sudo apt-get install python-dev
-  wget https://bootstrap.pypa.io/ez_setup.py -O - | sudo python
-  sudo easy_install -U distribute
-  sudo apt-get install python-pip
-  sudo pip install rpi.gpio
-  sudo pip install plotly
+-  sudo apt-get install python-dev
+-  wget https://bootstrap.pypa.io/ez_setup.py -O - | sudo python
+-  sudo easy_install -U distribute
+-  sudo apt-get install python-pip
+-  sudo pip install rpi.gpio
+-  sudo pip install plotly
 ```
 
-Create a new folder for your project. Create a config.json file in said folder 
-and input your plotly API key, and your plotly streaming tokens.
+Create a new folder for your project. Create a config.json file in said folder and input your plotly API key, and your plotly streaming tokens.
 --------
 Example config.json:
 ```
