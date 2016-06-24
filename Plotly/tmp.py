@@ -1,3 +1,7 @@
+## Plotly Example of basic temperature sensor ##
+## IRaspberrypi 
+
+#Import required modules
 import plotly.plotly as py
 import json
 import time
@@ -53,7 +57,7 @@ url = py.plot([
 
 print "View your streaming graph here: ", url
 
-# temperature sensor middle pin connected channel 0 of mcp3008
+# open stream to write sensor values to given streaming token.
 stream = py.Stream(plotly_user_config['plotly_streaming_tokens'][0])
 stream.open()
 
