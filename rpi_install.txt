@@ -1,0 +1,93 @@
+﻿RPi Install
+
+update:-
+
+sudo apt-get update
+sudo apt-get upgrade
+
+GPIO:-
+
+sudo apt-get install python-dev
+sudo apt-get install python-rpi.gpio
+sudo apt-get install python3-rpi.gpio
+
+PubNub:-
+
+sudo apt-get update
+sudo apt-get install python-dev
+sudo apt-get install python-pip
+sudo pip install pubnub
+
+
+Camera:- 
+
+sudo apt-get install python-picamera
+sudo apt-get install python-picamera-docs
+
+VNC/vim:-
+
+sudo apt-get install tightvncserver
+sudo apt-get install vim-gtk
+sudo apt-get install vim-gnome
+
+dos2unix:-
+
+sudo apt-get install dos2unix
+
+video:-
+
+sudo apt-get install gpac
+sudo apt-get install omxplayer
+
+webiopi:-
+wget http://sourceforge.net/projects/webiopi/files/WebIOPi-0.7.1.tar.gz
+wget https://github.com/weaved/installer/raw/master/binaries/weaved-nixinstaller_1.2.13.bin
+tar xvzf webiopi-xyz.tar.gz
+cd webiopi-xyz
+sudo ./setup.sh
+
+sudo webiopi -d -c /etc/webiopi/config
+
+
+
+chrome:-
+
+sudo apt-get install chromium
+
+scratchGPIO:-
+
+http://simplesi.net/scratchgpio/scratch-raspberrypi-gpio/
+
+
+weather station:-
+
+	install Node.js for ARM
+
+	wget http://node-arm.herokuapp.com/node_latest_armhf.deb
+	sudo dpkg -i node_latest_armhf.deb
+	# Check installation
+	node -v
+
+	then add the packages ‘serialport’ and ‘node-rest-client’ via npm:
+
+	$ npm install serialport
+	$ npm install node-rest-client
+
+Controlling an Arduino with PyFirmata
+
+Python3:-
+sudo apt-get install python3
+sudo apt-get install python-setuptools
+sudo apt-get install python3-pip
+
+Install Python MQTT client library:- (https://www.endian.se/content/?p=206)
+sudo apt-get install python3-pip
+sudo apt-get install python-pip
+sudo pip-3.2 install mosquitto
+
+Install an MQTT broker:-
+sudo apt-get install mosquitto mosquitto-clients
+
+pip install paho-mqtt
+
+
