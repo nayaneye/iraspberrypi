@@ -39,6 +39,9 @@ video:-
 sudo apt-get install gpac
 sudo apt-get install omxplayer
 
+soft keyboard:-
+sudo apt-get install matchbox-keyboard
+
 webiopi:-
 wget http://sourceforge.net/projects/webiopi/files/WebIOPi-0.7.1.tar.gz
 wget https://github.com/weaved/installer/raw/master/binaries/weaved-nixinstaller_1.2.13.bin
