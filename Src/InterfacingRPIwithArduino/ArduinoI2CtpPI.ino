@@ -1,4 +1,14 @@
+
+
 #include <Wire.h>
+
+/**
+ * Raspberry pi    GND    ----------   GND     Arduino
+ *                 3.3v   ----------   5v
+ *                 SCL    ----------   A5                
+ *                 SDA    ----------   A4
+ * http://blog.oscarliang.net/raspberry-pi-arduino-connected-i2c/
+ */
 
 #define SLAVE_ADDRESS 0x04
 int number = 0;
