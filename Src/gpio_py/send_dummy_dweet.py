@@ -2,7 +2,7 @@ import random
 import time
 import requests # This must be installed with pip install requests (or pip3 for python 3)
 
-Dweet_Thing_Name = "DummyDweets"
+Dweet_Thing_Name = ""   # Define a unique random name here
 
 Dweet_Base_URL = "https://dweet.io/dweet/for/"
 Dweet_For_URL = Dweet_Base_URL + Dweet_Thing_Name + "?"
