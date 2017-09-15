@@ -1,11 +1,11 @@
 import sys
-sys.path.append('../../')
+sys.path.append('./')
 
-import time
 import requests # This must be installed with pip install requests (or pip3 for python 3)
-from devices.distancesensors import hcsr04
+import time
+import hcsr04
 
-Dweet_Thing_Name = "RaspiDweets"
+Dweet_Thing_Name = ""   # Add some unique name here
 
 Dweet_Base_URL = "https://dweet.io/dweet/for/"
 Dweet_For_URL = Dweet_Base_URL + Dweet_Thing_Name + "?"
