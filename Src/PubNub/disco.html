@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<title>Getting data from a sensor</title>
+	<meta name="description" content="Simple Chat Room">
+	<meta name="author" content="Tomomi Imura  @girlie_mac">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+	* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+	body {
+		font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", "Roboto Light", "Segoe UI Web Light", "Segoe UI Light", "Segoe UI Web Regular", "Segoe UI", Helvetica, Arial, sans-serif; 
+		margin: 1em;
+	}
+
+	header {
+		margin-bottom: 2em;
+	}
+	h1, h2, h3 {
+		margin: 0;
+		text-rendering: optimizeLegibility;
+	}
+	h1 {
+		font-size: 2.4em;
+		line-height: 1.4em;
+		text-transform: lowercase;
+		font-weight: normal;
+		text-shadow: 1px 2px 0 #fff;
+	}
+	h2 {
+		font-size: 1em;
+		text-transform: uppercase;
+		font-weight: normal;
+		text-shadow: 1px 1px 0 #fff;
+	}
+	footer {
+		position: absolute;
+		bottom: 2em;
+	}
+	#main {
+		margin: 4em auto;
+		text-align: center;
+		position: relative;
+	}
+	button {
+		display: block;
+		font-size: 2em;
+		border-radius: 10px;
+		padding: .3em 1em;
+
+		position: absolute;
+		top: 50%;
+		left: calc(50% - 100px);
+	}
+	</style>
+</head>
+
+<body>
+	<header>
+		<h1>Control LED from Web Interface</h1>
+		<h2>Publishing from web to control a LED</h2>
+	</header>
+
+	<section id="main" role="main">
+		<img src="https://1cf882a694ee11747fca-c79190285169d8be4263a562e88e9b8f.ssl.cf1.rackcdn.com/1471418820641MaxPi.png" width="100" style="margin-bottom: 150px">
+		<button>Disco on!</button>
+	</section>
+
+	<footer>
+		Use this UI with <code>project-python/remote-led/remote-led.py</code>.
+	</footer>
+
+	<!-- including the latest PubNub JavaScript SDK -->
+	<script src="https://cdn.pubnub.com/sdk/javascript/pubnub.4.15.1.js"></script>
+	<script>
+(function() {
+
+	// DOM
+	var button = document.querySelector('button'); 
+
+	// This is the channel name you are subscribing in remote-led.py
+	var channel = 'test';
+
+	// Init - Get your own keys at admin.pubnub.com
+	
+
+function disc() {
+
+var p = new PubNub({
+		subscribe_key: 'sub-c-74c2a3a2-9b76-11e7-bec3-c65ebd354f7d',
+		publish_key:   'pub-c-73a9c60e-26a6-4e5e-a92a-858d0a7247e2',
+		secretKey:'sec-c-YTQ4MDc5N2UtODJmOC00ZGViLTljMzMtMWViNjlhNzFiYzY1',
+		ssl:false
+	});
+
+p.publish(
+    {
+        message: {'led': 1},
+        channel: 'Channel-rqbvqvvdo',
+        sendByPost: true, // true to send via post
+        storeInHistory: false //override default storage options
+ // publish extra meta with the request
+    }, 
+    function (status, response) {
+    	console.log(response)
+        if (status.error) {
+            // handle error
+            console.log(status)
+        } else {
+            console.log("message Published w/ timetoken", response.timetoken)
+        }
+    }
+);
+}
+	// Sending data
+	function disco() {
+		alert();
+    p.publish({
+      channel : channel, 
+      message : {'led': 1}
+    });
+  }
+
+    // Click event
+	button.addEventListener('click', disc);
+
+})();
+	</script>
+	
+</body>
+</html>
