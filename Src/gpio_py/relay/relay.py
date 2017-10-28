@@ -9,10 +9,10 @@ try:
      for x in range(0,2):
         time.sleep(5)
         GPIO.output(GPIOPIN,GPIO.HIGH)
-    print " Pin set high"
+        print " Pin set high"
         time.sleep(5)
         GPIO.output(GPIOPIN,GPIO.LOW)
-    print " Pin set low"
+        print " Pin set low"
 
 except KeyboardInterrupt:
     print "KeyboardInterrupt occured"finally:
