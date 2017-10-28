@@ -6,7 +6,8 @@
 # On Raspberry Pi terminal - sudo pip install pubnub
 # Execute this file (with your keys) - A message will be published and the same terminal will also show the message as received.
 # You can use this same file on another raspberry pi or your computer and execute the file on both of them to exchange messages
-
+# install pubnub using the pip with following way not the 3.
+#sudo pip install 'pubnub>=4.0.13'
 import json, re
 
 
