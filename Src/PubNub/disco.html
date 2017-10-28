@@ -6,7 +6,6 @@
 
 	<title>Getting data from a sensor</title>
 	<meta name="description" content="Simple Chat Room">
-	<meta name="author" content="Tomomi Imura  @girlie_mac">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<style>
 	* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
@@ -90,16 +89,16 @@
 function disc() {
 
 var p = new PubNub({
-		subscribe_key: 'sub-c-74c2a3a2-9b76-11e7-bec3-c65ebd354f7d',
-		publish_key:   'pub-c-73a9c60e-26a6-4e5e-a92a-858d0a7247e2',
-		secretKey:'sec-c-YTQ4MDc5N2UtODJmOC00ZGViLTljMzMtMWViNjlhNzFiYzY1',
+		subscribe_key: '**** YOUR SUB KEY*******',
+		publish_key:   '****YOUR PUB KEY - Starts with pub- ****',
+		secretKey: '**** YOUR SECRET KEY -- Starts with sec- ',
 		ssl:false
 	});
 
 p.publish(
     {
         message: {'led': 1},
-        channel: 'Channel-rqbvqvvdo',
+        channel: '**** YOUR CHANNEL ****',
         sendByPost: true, // true to send via post
         storeInHistory: false //override default storage options
  // publish extra meta with the request
